@@ -1,0 +1,84 @@
+.devis-management {
+  background-color: #f9f9f9;
+
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1c4344;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .sort-btn {
+    background-color: #1c4344;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .devis-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #ddd;
+      color: #333;
+      font-weight: bold;
+      border-bottom: 2px solid #aaa;
+    }
+
+    td {
+      vertical-align: top;
+      font-size: 14px;
+      color: #333;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8f8f8;
+    }
+    .actions {
+      margin-top: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      //gap: 10px;
+
+      .delete-btn {
+        color: #fff;
+        background-color: #c0392b;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+    }
+
+  }
+
+  .pagination {
+    .page-btn {
+
+      padding: 6px 12px;
+      border-radius: 5px;
+      background-color: #1c4344;
+      border: none;
+      color: white;
+    }
+
+  }
+}

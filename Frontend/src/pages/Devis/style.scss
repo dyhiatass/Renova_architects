@@ -1,0 +1,458 @@
+.questionnaire {
+    padding-top: 80px;
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+
+    .questionnaire_container {
+       //border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      
+        .questionnaire_img {
+            
+            background-image: url('../../../public/image/image_agence/836f1182ef7b611b5c455fdc6bef3931.jpg');
+            height: 100vh; /* Hauteur initiale pleine page */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        /* Responsive pour tablettes */
+        @media (max-width: 768px) {
+            .questionnaire_img {
+                height: 120vh; /* Augmente la hauteur pour s'adapter à un écran plus petit */
+            }
+        }
+        
+        /* Responsive pour mobiles */
+        @media (max-width: 480px) {
+            .questionnaire_img {
+                
+                height: 150vh; 
+            }
+        }
+        
+
+        .question__titre {
+            font-size: 15px;
+            top: 10px;
+            left: 10px;
+            position: absolute;
+            color: #4D4D4D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .question__titre_devis {
+                font-size: 15px;
+                color: #4D4D4D;
+            }
+
+            .material-icons {
+                font-size: 15px;
+                color: #4D4D4D;
+            }
+        }
+
+        .questionnaire_containent {
+            //border:1px solid red;
+          width: 50%;
+            height: 100%;
+            display: flex;
+            //border-top: 1px solid ;
+            border-top: 1px solid #c7c7c7;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+
+            .question {
+                //border:1px solid red;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top: 100px;
+                margin-right: auto;
+
+
+                .question__option {
+                    display: flex;
+                    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+                    justify-content: center; /* Centre le contenu horizontalement */
+                    align-items: center; /* Centre le contenu verticalement */
+                    color: #1c4344;
+                    font-size: 20px; /* Taille de police par défaut pour les grands écrans */
+                    text-align: center;
+                    gap: 20px; /* Ajout d'un espace entre les options */
+                    padding: 10px;
+                }
+                
+                /* Responsive pour tablettes */
+                @media (max-width: 768px) {
+                    .question__option {
+                        font-size: 18px; /* Réduction de la taille de la police */
+                        gap: 13px; /* Espacement réduit entre les éléments */
+                        padding: 15px;
+                    }
+                }
+                
+                /* Responsive pour petits écrans (mobiles) */
+                @media (max-width: 480px) {
+                    .question__option {
+                        flex-direction: column; /* Empile les éléments verticalement */
+                        font-size: 16px; /* Réduction supplémentaire de la taille de la police */
+                        gap: 10px; /* Espacement réduit pour les petits écrans */
+                        padding: 10px;
+                    }
+                }
+                
+
+                .question__btn {
+                    //border: 1px solid blue;
+                    width: 100%;
+                    gap: 20px;
+                    /* Ajout d'espace entre les boutons */
+                    max-width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    /* Permet aux boutons de s'adapter et passer à la ligne si nécessaire */
+                    padding: 20px;
+
+
+
+                    button {
+
+                        max-width: 140px;
+                        /* Largeur maximale des boutons */
+                        width: 100%;
+                        /* Prend tout l'espace disponible */
+                        height: 110px;
+                        /* Hauteur uniforme pour tous les boutons */
+                        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+                        font-size: 14px;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: white;
+                        color: #1c4344;
+                        border: 1px solid #1c4344;
+                        transition: all 0.3s ease;
+                        /* Animation au survol */
+                        cursor: pointer;
+
+                      
+
+                    }
+
+                    button.proprietaire::before {
+                        content: "home";
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+
+                    button.locataire::before {
+                        content: "person";
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+
+                    button.professionnel::before {
+                        content: "business";
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+
+                    button.acquereur::before {
+                        content: "build";
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+
+                    button.renovation::before {
+                        content: "construction";
+                        /* Icône pour Rénovation */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+
+                    button.construction::before {
+                        content: "engineering";
+                        /* Icône pour Construction */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+
+                    button.extension::before {
+                        content: "add_home";
+                        /* Icône pour Extension */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+
+                    button.principale::before {
+                        content: "home";
+                        /* Icône pour Résidence principale */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+                    button.aménagement::before {
+                        content: "build";
+                        /* Icône pour Aménagement */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+                    
+                    button.administrative::before {
+                        content: "assignment";
+                        /* Icône pour Demande administrative */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+                    
+                    button.individuelle::before {
+                        content: "house";
+                        /* Icône pour Maison individuelle */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+                    button.tertiaire::before {
+                        content: "business";
+                        /* Icône pour Secteur tertiaire */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+                    
+                    button.restauration::before {
+                        content: "restaurant";
+                        /* Icône pour Professionnel restauration */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+                    button.secondaire::before {
+                        content: "holiday_village";
+                        /* Icône pour Résidence secondaire */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+
+                    button.investissement::before {
+                        content: "account_balance";
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+
+                    button.oui::before {
+                        content: "check_circle";
+                        /* Icône pour Oui */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+
+                    }
+
+                    button.non::before {
+                        content: "cancel";
+                        /* Icône pour Non */
+                        font-family: "Material Icons";
+                        font-size: 30px;
+                        color: #1c4344;
+                    }
+                }
+
+            }
+            @media (max-width: 768px) {
+                .question {
+                    margin-top: 100px;
+                }
+            }
+            
+            /* Responsive pour mobiles */
+            @media (max-width: 480px) {
+                .question {
+                     margin-top: 60px;
+                }
+            }
+            .container_form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            form {
+                width: 100%;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                padding: 20px;
+                //box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                //background-color: #fff;
+                border-radius: 10px;
+            }
+
+            .titre__form {
+              
+                color: #1c4344;
+                font-size: 20px; /* Taille de police par défaut */
+                text-align: center;
+                width: 100%;
+                margin-bottom: 20px; /* Marge par défaut */
+            }
+            
+            /* Responsive pour tablettes */
+            @media (max-width: 768px) {
+                .titre__form {
+                    margin-top: 50px;
+                    font-size: 16px; /* Réduction de la taille de la police pour tablettes */
+                    margin-bottom: 15px; /* Ajustement de la marge */
+                }
+            }
+            
+            /* Responsive pour mobiles */
+            @media (max-width: 480px) {
+                .titre__form {
+                    font-size: 16px; /* Taille de police réduite pour mobiles */
+                    margin-bottom: 10px; /* Réduction de la marge pour économiser de l'espace */
+                }
+            }
+            
+
+            .first_last {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 10px;
+                gap: 10px;
+            }
+
+            .adresse {
+                width: 100%;
+            }
+
+            input,
+            textarea {
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+                border: 1px solid #1c4344;
+                padding: 10px;
+                margin: 5px 0;
+                height: 30px;
+                font-size: 15px;
+                border-radius: 5px;
+                width: 95%;
+            }
+
+            textarea {
+                height: 80px;
+            }
+
+            button[type="submit"] {
+                border: 1px solid #1c4344;
+                background-color: #fff;
+                color: #1c4344;
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+                align-self: center;
+                font-size: 15px;
+                box-shadow: 0px 4px 9px #1c4344;
+            }
+
+            button[type="submit"]:hover {
+                background-color: #1c4344;
+                color: #fff;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            }
+
+            /* Styles responsive */
+            @media (max-width: 768px) {
+                .first_last {
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                input,
+                textarea {
+                    font-size: 14px;
+                    height: 30px;
+                }
+
+                button[type="submit"] {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .titre__form {
+                    font-size: 18px;
+                }
+
+                form {
+                    padding: 10px;
+                }
+
+                input,
+                textarea {
+                    font-size: 13px;
+                    height: 26px;
+                }
+
+                button[type="submit"] {
+                    font-size: 14px;
+                }
+            }
+
+
+
+        }
+
+       
+
+        .questionnaire_img::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 233, 198, 0.1);
+        }
+    }
+
+
+}
